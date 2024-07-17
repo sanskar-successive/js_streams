@@ -27,6 +27,7 @@ app.get('/stream', (req, res) => {
 
     fileReadStream.on('end', () => {
         console.log('Finished reading the file.');
+        fileReadStream.close();
     });
 
 })
